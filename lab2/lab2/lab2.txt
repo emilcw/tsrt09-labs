@@ -1,0 +1,47 @@
+#### TASK 1 ####
+
+How does the open system relate to the design objectives of the closed loop system?
+
+GAMMALT
+We have tried all different combinations in the open system using u1, u2 and wind. We have not noticed any particular difference. However when we have u1 = u2 = 0 and with wind disturbances, we can see that beta, p and r are disturbed to a significant extent, when we would like them to be as small as possible. Hopefully regulator in the closed loop system can fix this.
+GAMMALT
+
+We can see that the system follows the pilot commands poorly, especially u2.
+
+What requirements need feedback?
+
+We need feedback on beta, p and r to cancel the disturbances.
+
+Is the system stable?
+
+Using step(G) we can see that all states will converge. Moreover we can see that the system poles with eig(A) are in the left half plane ==>  As. Stable!
+
+How coupled is the system?
+
+From the sigma(G) we can see that the singular values are different, which indicates that the system is coupled. Moreover can we in bodemag(G) see that u1 has an affect on beta and r which is not ideal and u2 has an affect on p, which also is not ideal.
+
+What control input and system output are most coupled?
+
+See the question above.
+
+How much is the plane influenced by the wind disturbances?
+
+When applying wind (and not using the rudders) we get a maximal affect as:
+beta: -8.3 * 10^-1 deg / s
+p: -5.9 * 10^-1 deg / s
+r: -1.7 * 10^-1 deg / s
+This is a big problem since the pilots command will be disturbed by that.
+
+### Task 2 ###
+
+Se koden.
+
+
+
+
+
+
+
+
+
+
